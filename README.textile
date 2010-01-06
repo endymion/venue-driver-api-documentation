@@ -1,0 +1,14 @@
+h1. Venue Driver API Documentation
+
+h2. Examples
+
+h3. PHP
+
+These examples show how to build reservation and guest list forms with PHP.  These examples use a "PHP library":http://code.google.com/p/phpactiveresource/ for accessing our REST resources.
+
+Here are the example files:
+
+"Example PHP reservation form":http://github.com/endymion/venue-driver-api-documentation/raw/master/examples/php/ReservationForm.php
+"Example PHP guest list form":http://github.com/endymion/venue-driver-api-documentation/raw/master/examples/php/GuestListForm.php
+"Venue Driver API configuration file":http://github.com/endymion/venue-driver-api-documentation/raw/master/examples/php/VenueDriver.php
+"ActiveResource REST API for PHP":http://github.com/endymion/venue-driver-api-documentation/raw/master/examples/php/ActiveResource.php
