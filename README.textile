@@ -2,13 +2,18 @@ h1. Venue Driver API Documentation
 
 h2. REST API
 
-Venue Driver provides a simple HTTP API that's built according to a REST design pattern.  That just means that each of our resources like "Events" has a URL that you can call, and each resource has 'index', 'create', 'read', 'update' and 'delete' actions.  You tell it whether you want your data in XML or JSON.  In some cases we also provide HTML representations so that you don't even have to process raw data.  For example, to get a drop-down select box for all upcoming events at Heaven with Venue Driver ID codes, you might call a URL like this:
+Venue Driver provides a simple HTTP API that's built according to a REST design pattern.  That just means that each of our resources like "Events" has a URL that you can call, and each resource has 'index', 'create', 'read', 'update' and 'delete' actions.  You tell it whether you want your data in XML or JSON.  In some cases we also provide HTML representations so that you don't even have to process raw data.
 
-	@http://venuedriver.com/api/venues/184/events/select_tag.html?username=ryan&password=password@
+h2. Convenience methods
+
+Venue Driver provides an API method that will return HTML code for an event select box, to be inserted
+directly into a web page.  For example, to get a drop-down select box for all upcoming events at the venue with Venue Driver ID code 129582, you might call a URL like this:
+
+	@http://venuedriver.com/api/venues/129582/events/select_tag.html?username=venuesite&password=password@
 
 You can test from the command line using the cURL utility:
 
-  @curl 'http://venuedriver.com/api/venues/184/events/select_tag.html?username=ryan&password=password'@
+  @curl 'http://venuedriver.com/api/venues/129582/events/select_tag.html?username=venuesite&password=password'@
 
 It will return something like this:
 
@@ -20,7 +25,7 @@ It will return something like this:
 
 Using that resource URL is pretty simple.  In Ruby for example it looks like this:
 
-	@url = "http://venuedriver/api/venues/184/events/select_tag.html?username=ryan&password=password"
+	@url = "http://venuedriver/api/venues/129582/events/select_tag.html?username=venuesite&password=password"
 	events_html = Net::HTTP.get_response(URI.parse(url))@
 
 Then you can just drop that HTML snippet into your form with @<%= events_html %>@ or the equivalent in PHP or whatever.  That gives you a simple way to build a form that can request guest list signup for any upcoming event.
