@@ -6,6 +6,10 @@ Venue Driver provides a simple HTTP API that's built according to a REST design 
 
 	@http://venuedriver.com/api/venues/184/events/select_tag.html?username=ryan&password=password@
 
+You can test from the command line using the cURL utility:
+
+  @curl 'http://venuedriver.com/api/venues/184/events/select_tag.html?username=ryan&password=password'@
+
 It will return something like this:
 
 @<select id="event" name="event"><option value="3768">Cabaret of Dr. Calagari - Apr 16</option>
