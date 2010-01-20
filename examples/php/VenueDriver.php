@@ -33,14 +33,14 @@ function event_select_tag($resource, $venue_id) {
     include($cachefile);
     return;
   }
-	$response = $resource->_fetch ($resource->site .
-		'venues/' . $venue_id . "/events/select_tag.html",
-		'get', nil);
-	list($headers, $select_tag) = explode ("\r\n\r\n", $response, 2);
+  $response = $resource->_fetch ($resource->site .
+    'venues/' . $venue_id . "/events/select_tag.html",
+    'get', nil);
+  list($headers, $select_tag) = explode ("\r\n\r\n", $response, 2);
   $fp = fopen($cachefile, 'w'); 
   fwrite($fp, $select_tag);
   fclose($fp); 
-	return $select_tag;
+  return $select_tag;
 }
 
 ?>

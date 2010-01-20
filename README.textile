@@ -4,6 +4,12 @@ h2. REST API
 
 Venue Driver provides a simple HTTP API that's built according to a REST design pattern.  That just means that each of our resources like "Events" has a URL that you can call, and each resource has 'index', 'create', 'read', 'update' and 'delete' actions.  You tell it whether you want your data in XML or JSON.  In some cases we also provide HTML representations so that you don't even have to process raw data.
 
+h3. Resources
+
+Venue Driver provides easy XML or JSON access to Reservation and Guest (for Guestlist) resources:
+
+
+
 h2. Convenience methods
 
 Venue Driver provides an API method that will return HTML code for an event select box, to be inserted
