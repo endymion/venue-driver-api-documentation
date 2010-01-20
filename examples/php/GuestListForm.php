@@ -1,20 +1,17 @@
 <?php
 
-$venue_id = 410591471; // Test venue ID, change this to your desired venue.
-
 require_once ('VenueDriver.php');
-
 
 if( $_POST['event'] && $_POST['first'] && $_POST['last'] && $_POST['phone'] && $_POST['email'])
 {
 	// create a new guest
 	$guest = new guest (array (
-	    'account' => $account_id,
-	    'event' => $_POST['event'],
-		'first' => $_POST['first'],
-		'last' => $_POST['last'],
-	    'phone' => $_POST['phone'],
-	    'email' => $_POST['email']
+    'account' => $account_id,
+    'event' => $_POST['event'],
+    'first' => $_POST['first'],
+    'last' => $_POST['last'],
+    'phone' => $_POST['phone'],
+    'email' => $_POST['email']
 	));
 	$g = $guest->save ();
 ?>
