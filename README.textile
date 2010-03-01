@@ -8,7 +8,10 @@ h3. Resources
 
 Venue Driver provides easy XML or JSON access to Reservation and Guest (for Guestlist) resources:
 
-
+* Events
+* Reservations
+* Guests
+* Contacts
 
 h2. Convenience methods
 
@@ -39,6 +42,10 @@ Then you can just drop that HTML snippet into your form with @<%= events_html %>
 When somebody submits the form, creating the guest list entry is similarly simple.  It also involves a simple HTTP query to an API URL.  Are you using PHP?  I can send you an example snippet for doing the post if so.
 
 h2. Examples
+
+h3. Ruby on Rails
+
+"Promoter":http://github.com/angelmg/promoter is a Rails plugin for accessing the Venue Driver API.  Promoter is a Rails Engine plugin that adds controllers and views to your web site for providing reservation, guest list and mailing list signup forms.  It uses Active Resource to access Venue Driver.
 
 h3. PHP
 
