@@ -19,60 +19,64 @@ h3. Get an event list
 
 You can get an event list for a venue record in Venue Driver if you have a valid login and also the venue ID.  The API's /venues resource exposes a nested events resource.  So if you want the events for the venue with ID 1234, then you can get that with:
 
-  <pre><code>
-  curl 'http://venuedriver.com/api/venues/129582/events.xml?username=venuesite&password=password'
-  </code></pre>
+<pre>
+<code>
+curl 'http://venuedriver.com/api/venues/129582/events.xml?username=venuesite&password=password'
+</code>
+</pre>
   
 The above will return something like this:
 
-  <pre><code>
-  <events type="array">
-    <event>
-      <VIP-URL nil="true"></VIP-URL>
-      <active type="boolean" nil="true"></active>
-      <ages nil="true"></ages>
-      <close type="datetime">2000-01-01T08:15:00-05:00</close>
-      <closed-message nil="true"></closed-message>
-      <cover nil="true"></cover>
-      <created-at type="datetime">2010-02-09T20:48:10-05:00</created-at>
-      <date type="date">2010-03-12</date>
-      <description nil="true"></description>
-      <guestlist-URL nil="true"></guestlist-URL>
-      <guestlist-conditions nil="true"></guestlist-conditions>
-      <home-URL nil="true"></home-URL>
-      <id type="integer">5635</id>
-      <myspace-URL nil="true"></myspace-URL>
-      <open type="datetime">2000-01-01T22:30:00-05:00</open>
-      <tickets-URL nil="true"></tickets-URL>
-      <tickets-sold-count type="integer">0</tickets-sold-count>
-      <time type="datetime" nil="true"></time>
-      <title>Friday Event</title>
-      <updated-at type="datetime">2010-03-01T14:42:29-05:00</updated-at>
-    </event>
-    <event>
-      <VIP-URL nil="true"></VIP-URL>
-      <active type="boolean" nil="true"></active>
-      <ages nil="true"></ages>
-      <close type="datetime">2000-01-01T08:15:00-05:00</close>
-      <closed-message nil="true"></closed-message>
-      <cover nil="true"></cover>
-      <created-at type="datetime">2010-02-09T20:48:35-05:00</created-at>
-      <date type="date">2010-03-13</date>
-      <description nil="true"></description>
-      <guestlist-URL nil="true"></guestlist-URL>
-      <guestlist-conditions nil="true"></guestlist-conditions>
-      <home-URL nil="true"></home-URL>
-      <id type="integer">5636</id>
-      <myspace-URL nil="true"></myspace-URL>
-      <open type="datetime">2000-01-01T22:00:00-05:00</open>
-      <tickets-URL nil="true"></tickets-URL>
-      <tickets-sold-count type="integer">0</tickets-sold-count>
-      <time type="datetime" nil="true"></time>
-      <title>Saturday Event</title>
-      <updated-at type="datetime">2010-03-01T14:42:29-05:00</updated-at>
-    </event>
-  </events>
-  </code></pre>
+<pre>
+<code>
+<events type="array">
+  <event>
+    <VIP-URL nil="true"></VIP-URL>
+    <active type="boolean" nil="true"></active>
+    <ages nil="true"></ages>
+    <close type="datetime">2000-01-01T08:15:00-05:00</close>
+    <closed-message nil="true"></closed-message>
+    <cover nil="true"></cover>
+    <created-at type="datetime">2010-02-09T20:48:10-05:00</created-at>
+    <date type="date">2010-03-12</date>
+    <description nil="true"></description>
+    <guestlist-URL nil="true"></guestlist-URL>
+    <guestlist-conditions nil="true"></guestlist-conditions>
+    <home-URL nil="true"></home-URL>
+    <id type="integer">5635</id>
+    <myspace-URL nil="true"></myspace-URL>
+    <open type="datetime">2000-01-01T22:30:00-05:00</open>
+    <tickets-URL nil="true"></tickets-URL>
+    <tickets-sold-count type="integer">0</tickets-sold-count>
+    <time type="datetime" nil="true"></time>
+    <title>Friday Event</title>
+    <updated-at type="datetime">2010-03-01T14:42:29-05:00</updated-at>
+  </event>
+  <event>
+    <VIP-URL nil="true"></VIP-URL>
+    <active type="boolean" nil="true"></active>
+    <ages nil="true"></ages>
+    <close type="datetime">2000-01-01T08:15:00-05:00</close>
+    <closed-message nil="true"></closed-message>
+    <cover nil="true"></cover>
+    <created-at type="datetime">2010-02-09T20:48:35-05:00</created-at>
+    <date type="date">2010-03-13</date>
+    <description nil="true"></description>
+    <guestlist-URL nil="true"></guestlist-URL>
+    <guestlist-conditions nil="true"></guestlist-conditions>
+    <home-URL nil="true"></home-URL>
+    <id type="integer">5636</id>
+    <myspace-URL nil="true"></myspace-URL>
+    <open type="datetime">2000-01-01T22:00:00-05:00</open>
+    <tickets-URL nil="true"></tickets-URL>
+    <tickets-sold-count type="integer">0</tickets-sold-count>
+    <time type="datetime" nil="true"></time>
+    <title>Saturday Event</title>
+    <updated-at type="datetime">2010-03-01T14:42:29-05:00</updated-at>
+  </event>
+</events>
+</code>
+</pre>
 
 h2. Convenience methods
 
