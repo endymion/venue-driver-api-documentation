@@ -285,7 +285,7 @@ h3. Ruby on Rails
 <pre>
 <code>
   >> @events = Event.find(:all, :params => {:venue_id => 1})
-  => [#<Event:0x1031b08b0 @attributes={"open"=>Sun Jan 02 03:30:00 UTC 2000, "myspace_URL"=>nil, "created_at"=>Fri Dec 18 03:48:14 UTC 2009, "title"=>"Sundays at Tabu", "close"=>Sat Jan 01 13:30:00 UTC 2000, "closed_message"=>nil, ...
+  => [#<Event:0x1031b08b0 @attributes={"open"=>Sun Jan 02 03:30:00 UTC 2000, "myspace_URL"=>nil, ...
   >> @events.size 
   => 38
   >> puts @events.first.to_yaml
@@ -318,7 +318,7 @@ h3. Ruby on Rails
     :venue_id: 1
   => nil
   >> @flyers = Flyer.find(:all, :params => {:venue_id => 1, :event_id => 5313})
-  => [#<Flyer:0x102ee6940 @attributes={"asset_file_name"=>"IMG_3020.jpg", "asset_url"=>"/assets/8/original/IMG_3020.jpg", "asset_file_size"=>473217, "asset_content_type"=>"image/jpeg", "id"=>8, "parent_id"=>nil, "asset_updated_at"=>Tue Mar 02 22:00:00 UTC 2010}, @prefix_options={:venue_id=>1, :event_id=>5313}>, #<Flyer:0x102ee68a0 @attributes={"asset_file_name"=>"IMG_2970.jpg", "asset_url"=>"/assets/9/original/IMG_2970.jpg", "asset_file_size"=>603736, ...
+  => [#<Flyer:0x102ee6940 @attributes={"asset_file_name"=>"IMG_3020.jpg", "asset_url"=>"/assets/8/original/IMG_3020.jpg" ...
   >> @flyers.size
   => 5
   >> puts @flyers.first.to_yaml
