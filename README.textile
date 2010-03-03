@@ -8,7 +8,9 @@ h3. Resources
 
 Venue Driver provides easy XML or JSON access to Reservation and Guest (for Guestlist) resources:
 
+* Venues
 * Venues/Events
+* Venues/Events/Flyers
 * Reservations
 * Guests
 * Contacts
@@ -278,7 +280,64 @@ h2. Examples
 
 h3. Ruby on Rails
 
-"Promoter":http://github.com/angelmg/promoter is a Rails plugin for accessing the Venue Driver API.  Promoter is a Rails Engine plugin that adds controllers and views to your web site for providing reservation, guest list and mailing list signup forms.  It uses Active Resource to access Venue Driver.
+"Promoter":http://github.com/angelmg/promoter is a Rails plugin for accessing the Venue Driver API.  Promoter is a Rails Engine plugin that adds controllers and views to your web site for providing reservation, guest list and mailing list signup forms.  It uses Active Resource to access Venue Driver.  For example, here is how to get a list of events and a list of flyers for an event from the console:
+
+<pre>
+<code>
+  >> @events = Event.find(:all, :params => {:venue_id => 1})
+  => [#<Event:0x1031b08b0 @attributes={"open"=>Sun Jan 02 03:30:00 UTC 2000, "myspace_URL"=>nil, "created_at"=>Fri Dec 18 03:48:14 UTC 2009, "title"=>"Sundays at Tabu", "close"=>Sat Jan 01 13:30:00 UTC 2000, "closed_message"=>nil, ...
+  >> @events.size 
+  => 38
+  >> puts @events.first.to_yaml
+  --- !ruby/object:Event 
+  attributes: 
+    open: 2000-01-02 03:30:00 Z
+    myspace_URL: 
+    created_at: 2009-12-18 03:48:14 Z
+    title: Sundays at Tabu
+    close: 2000-01-01 13:30:00 Z
+    closed_message: 
+    ages: 
+    cover: 
+    guestlist_conditions: 
+    updated_at: 2010-03-01 19:42:22 Z
+    time: 
+    wiki_name: 
+    id: 5237
+    date: 2010-02-28
+    VIP_URL: 
+    tickets_URL: 
+    home_URL: 
+    description: 
+    active: 
+    flyers: []
+
+    tickets_sold_count: 0
+    guestlist_URL: 
+  prefix_options: 
+    :venue_id: 1
+  => nil
+  >> @flyers = Flyer.find(:all, :params => {:venue_id => 1, :event_id => 5313})
+  => [#<Flyer:0x102ee6940 @attributes={"asset_file_name"=>"IMG_3020.jpg", "asset_url"=>"/assets/8/original/IMG_3020.jpg", "asset_file_size"=>473217, "asset_content_type"=>"image/jpeg", "id"=>8, "parent_id"=>nil, "asset_updated_at"=>Tue Mar 02 22:00:00 UTC 2010}, @prefix_options={:venue_id=>1, :event_id=>5313}>, #<Flyer:0x102ee68a0 @attributes={"asset_file_name"=>"IMG_2970.jpg", "asset_url"=>"/assets/9/original/IMG_2970.jpg", "asset_file_size"=>603736, ...
+  >> @flyers.size
+  => 5
+  >> puts @flyers.first.to_yaml
+  --- !ruby/object:Flyer 
+  attributes: 
+    asset_file_name: IMG_3020.jpg
+    asset_url: /assets/8/original/IMG_3020.jpg
+    asset_file_size: 473217
+    asset_content_type: image/jpeg
+    id: 8
+    parent_id: 
+    asset_updated_at: 2010-03-02 22:00:00 Z
+  prefix_options: 
+    :venue_id: 1
+    :event_id: 5313
+  => nil
+  >> 
+</code>
+</pre>
 
 h3. PHP
 
