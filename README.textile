@@ -27,7 +27,7 @@ If you need to obtain a list of venues for an account, then you will need the ac
 
 <pre>
 <code>
-curl 'http://localhost:3000/api/accounts/1234/venues.xml?username=venuesite&password=password'
+curl 'http://venuedriver.com/api/accounts/1234/venues.xml?username=venuesite&password=password'
 </code>
 </pre>
 
@@ -128,7 +128,7 @@ You can also request the same information with JSON formatting instead of XML, l
 
 <pre>
 <code>
-curl 'http://localhost:3000/api/accounts/1234/venues.json?username=venuesite&password=password'
+curl 'http://venuedriver.com/api/accounts/1234/venues.json?username=venuesite&password=password'
 </code>
 </pre>
 
