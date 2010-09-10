@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"> 
+	<head> 
+		<title>Example of an unobtrusive onChange event binding with jQuery</title> 
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> 
+ 
+		<script>
+      jQuery(document).ready(function(){ // When the DOM has loaded,
+        jQuery('#venue').change(function(){ // bind this function to the #venue's onChange event.
+          getEvents();
+        });
+      });
+      
+      function getEvents() {
+        jQuery('#venue option:selected:first').each(function () {
+          jQuery('#event').text(
+            'Loading event list for venue "' + jQuery(this).text() + '" with ID: ' + jQuery(this).val()
+          );
+        });
+      }
+		</script> 
+
+	</head> 
+
+	<body> 
+
+    <!--
+      This select box is an example of a venue list that was returned from the Venue Driver API's
+      HTML convenience method "/api/venues/[ID]/events/select_tag.html".
+    -->
+    <select id="venue" name="venue">
+      <option value="476">Test</option>
+      <option value="477">Voodoo Lounge at The Rio</option>
+      <option value="478">Palms Pool At The Palms</option>
+      <option value="479">Rain At The Palms</option>
+      <option value="480">Playboy Club At The Palms</option>
+      <option value="481">Ghost Bar At The Palms</option>
+      <option value="482">Ruby Skye</option>
+      <option value="483">1015</option>
+      <option value="484">Avalon Hollywood</option>
+      <option value="485">I - Bar at Rio</option>
+      <option value="486">Voodoo Beach at Rio</option>
+      <option value="487">Bikini Beach at Rio</option>
+      <option value="488">The Wine Cellar at Rio</option>
+      <option value="492">Moon at the Palms</option>
+      <option value="493">Neptune Pool at Caesars' Palace</option>
+      <option value="494">Garden of the Gods Pool at Caesars' Palace</option>
+      <option value="495">Cleopatra's Barge at Caesars' Palace</option>
+      <option value="514">Crown Nightclub at the Rio</option>
+      <option value="515">Minus 5 at the Monte Carlo</option>
+    </select>
+
+    <div id="event"></div>
+ 
+  </body>
+
+</html> 

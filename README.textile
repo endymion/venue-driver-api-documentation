@@ -513,3 +513,9 @@ Here are the example files:
 "Example PHP guest list form":http://github.com/endymion/venue-driver-api-documentation/raw/master/examples/php/GuestListForm.php
 "Venue Driver API configuration file":http://github.com/endymion/venue-driver-api-documentation/raw/master/examples/php/VenueDriver.php
 "ActiveResource REST API for PHP":http://github.com/endymion/venue-driver-api-documentation/raw/master/examples/php/ActiveResource.php
+
+h3. JavaScript
+
+You might want to add an on-change handler to the select boxes that Venue Driver's convenience methods return.  Here is an example of how to do that unobtrusively using jQuery:
+
+"Unobtrusive JavaScript example":http://github.com/endymion/venue-driver-api-documentation/raw/master/examples/javascript/unobtrustive-onchange-example.html
