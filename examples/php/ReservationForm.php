@@ -27,12 +27,9 @@ else
 		Please provide all required fields.
 <?
 	}
-
-	// create a reservation form
-	$select_tag = event_select_tag(new reservation, $venue_id);
 ?>
 	<form action="#" method="post">
-		Event: <? print $select_tag; ?><br/>
+		Event: <? event_select_tag(new reservation, $venue_id); ?><br/>
 		First:  <input type="text" name="first" /><br />
 		Last:  <input type="text" name="last" /><br />
 		Phone: <input type="text" name="phone" /><br />
